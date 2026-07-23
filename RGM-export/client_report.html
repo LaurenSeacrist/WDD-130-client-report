@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Report | WDD 130</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=VT323&family=JetBrains+Mono:wght@300;400;500;700&display=swap');
+    :root {
+      --bg:#0B132B; --card:#0f1a3a; --card-dk:#091025;
+      --blue:#3A86FF; --gold:#FFBE0B; --gray:#E5E5E5; --red:#FB5607; --muted:#5a7aaa;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'JetBrains Mono',monospace;background:var(--bg);color:var(--gray);font-weight:300;font-size:16px;line-height:1.8;}
+    a{color:var(--blue);text-decoration:none;}
+    a:hover{color:var(--gold);text-decoration:underline;}
+    .page-wrap{max-width:860px;margin:0 auto;padding:4rem 2rem;}
+    .report-header{border-bottom:3px solid var(--gold);padding-bottom:2rem;margin-bottom:3rem;}
+    .report-header h1{font-family:'VT323',monospace;font-size:3.5rem;color:var(--gold);line-height:1;letter-spacing:.04em;}
+    .report-header .meta{font-size:.75rem;color:var(--muted);letter-spacing:.1em;margin-top:.5rem;}
+    .report-header .meta span{color:var(--blue);}
+
+    /* Context banner */
+    .context-banner{background:var(--card);border:2px solid var(--red);padding:1.75rem 2rem;margin-bottom:3rem;}
+    .context-banner h2{font-family:'VT323',monospace;font-size:2rem;color:var(--red);letter-spacing:.06em;margin-bottom:.75rem;}
+    .context-banner p{font-size:.85rem;line-height:1.95;margin-bottom:.75rem;opacity:.92;}
+    .context-banner p:last-child{margin-bottom:0;}
+    .context-banner strong{color:var(--gold);}
+
+    .role-section{margin-bottom:4rem;padding:2rem;background:var(--card-dk);border:2px solid;}
+    .role-section-client  {border-color:rgba(58,134,255,.4);}
+    .role-section-lead    {border-color:rgba(255,190,11,.4);}
+    .role-section-junior  {border-color:rgba(251,86,7,.4);}
+    .role-section-general {border-color:rgba(0,255,136,.3);}
+    .role-label{font-family:'VT323',monospace;font-size:1rem;letter-spacing:.18em;padding:.2rem .85rem;display:inline-block;margin-bottom:.75rem;}
+    .role-label-client  {background:var(--blue);color:#fff;}
+    .role-label-lead    {background:var(--gold);color:var(--bg);}
+    .role-label-junior  {background:var(--red);color:#fff;}
+    .role-label-general {background:#00ff88;color:#000;}
+    .role-section h2{font-family:'VT323',monospace;font-size:2.5rem;letter-spacing:.04em;line-height:1;margin-bottom:.25rem;}
+    .role-section-client  h2{color:var(--blue);}
+    .role-section-lead    h2{color:var(--gold);}
+    .role-section-junior  h2{color:var(--red);}
+    .role-section-general h2{color:#00ff88;}
+    .project-tag{font-family:'VT323',monospace;font-size:1rem;letter-spacing:.1em;color:var(--muted);border-bottom:1px solid rgba(255,190,11,.2);padding-bottom:.5rem;margin:2rem 0 1.25rem;}
+    h3{font-family:'VT323',monospace;font-size:1.6rem;color:var(--gold);letter-spacing:.06em;margin:1.5rem 0 .5rem;}
+    p{font-size:.88rem;line-height:1.95;margin-bottom:1rem;opacity:.92;}
+    .site-link{display:inline-block;font-family:'VT323',monospace;font-size:1.3rem;letter-spacing:.08em;padding:.35rem 1.25rem;border:2px solid var(--blue);color:var(--blue);margin-top:.5rem;transition:all .15s;}
+    .site-link:hover{background:var(--blue);color:#fff;text-decoration:none;}
+    .site-link-gold{border-color:var(--gold);color:var(--gold);}
+    .site-link-gold:hover{background:var(--gold);color:var(--bg);}
+    .site-link-red{border-color:var(--red);color:var(--red);}
+    .site-link-red:hover{background:var(--red);color:#fff;}
+    .divider{height:1px;background:repeating-linear-gradient(90deg,var(--gold) 0,var(--gold) 6px,transparent 6px,transparent 10px);margin:2rem 0;}
+    footer{border-top:1px solid rgba(255,190,11,.3);margin-top:4rem;padding-top:2rem;font-size:.7rem;color:var(--muted);text-align:center;letter-spacing:.08em;}
+  </style>
+</head>
+<body>
+<div class="page-wrap">
+
+  <div class="report-header">
+    <h1>CLIENT / DEVELOPER REPORT</h1>
+    <p class="meta">STUDENT: <span>Lauren Seacrist</span> &nbsp;·&nbsp; COURSE: <span>WDD 130</span> &nbsp;·&nbsp; YEAR: <span>2026</span></p>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       GROUP SITUATION EXPLANATION
+       ═══════════════════════════════════════ -->
+  <div class="context-banner">
+    <h2>⚠ GROUP SITUATION — IMPORTANT CONTEXT</h2>
+    <p>
+      This project required a group of students where each member would serve as
+      <strong>Client once, Lead Developer once, and Junior Developer once</strong> across
+      three different sites. The expectation was that the team would communicate regularly
+      to assign roles, share repositories, and coordinate deliverables.
+    </p>
+    <p>
+      My group consisted of myself, <strong>Isaiah Sotutu</strong>, and <strong>Tad Hurley</strong>.
+      From the beginning of the project, communication within the group was largely absent.
+      Despite my attempts to reach out and establish a working plan, neither teammate
+      consistently responded or proactively coordinated with me.
+    </p>
+    <p>
+      As a result, I made the decision to assign our roles myself in order to meet the
+      course requirements. I served as the <strong>Client for NeuroPhoenix</strong>,
+      the <strong>Lead Developer for the Retro Game Museum</strong>, and was assigned as
+      <strong>Junior Developer on PixelForge</strong> (Tad's site, with Isaiah as lead).
+      On the Retro Game Museum and PixelForge projects, I was forced to complete work
+      independently because my teammates did not contribute. On PixelForge specifically,
+      Isaiah — as lead developer — never communicated with me or granted me access to
+      the repository, making it impossible for me to participate in my assigned junior role.
+    </p>
+    <p>
+      I want to be transparent about these circumstances. I put in the work to deliver
+      complete, functional sites for all three projects and I believe the final products
+      reflect that effort. The communication challenges described throughout this report
+      are an honest account of what happened.
+    </p>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════
+       ROLE 1: CLIENT — NEUROPHOENIX
+       ═══════════════════════════════════════ -->
+  <div class="role-section role-section-client">
+    <span class="role-label role-label-client">ROLE: CLIENT</span>
+    <h2>CLIENT REPORT</h2>
+    <div class="project-tag">// PROJECT: NEUROPHOENIX &nbsp;·&nbsp; LEAD: ISAIAH SOTUTU &nbsp;·&nbsp; JUNIOR: TAD HURLEY</div>
+
+    <h3>How did you decide what content and images to use for your site plan?</h3>
+    <p>
+      For NeuroPhoenix I created a detailed site plan that outlined the purpose, target
+      audience, color palette, and content structure I wanted the development team to follow.
+      I selected imagery and copy that matched the brand identity I had in mind and documented
+      everything clearly so Isaiah and Tad would have a strong reference to build from.
+    </p>
+
+    <h3>How did you communicate with your developer? Was there any issues with communication?</h3>
+    <p>
+      I provided my site plan and supporting materials to the development team, but
+      communication throughout the project was inconsistent. Responses were infrequent
+      and I had limited visibility into progress until near the end. While the team did
+      ultimately complete the work, the lack of regular check-ins made the process more
+      stressful than it needed to be. I would have appreciated more proactive updates
+      from the lead developer.
+    </p>
+
+    <h3>Did your developer meet your expectations for your site?</h3>
+    <p>
+      The development team delivered a site that reflected the core requirements outlined
+      in my site plan. There were refinements I would have liked to see, but given the
+      communication challenges the team worked with what they had and produced a result
+      that captured the overall direction I intended.
+    </p>
+
+    <h3>What will you do differently next time you hire a team to do a project for you?</h3>
+    <p>
+      Next time I would establish a shared communication channel from day one and set
+      mandatory check-in milestones with clear deadlines. I would also make sure the team
+      acknowledges the site plan early and has a chance to ask questions before development
+      begins, rather than discovering misunderstandings at the end of the project.
+    </p>
+
+    <div class="divider"></div>
+    <p style="font-size:.8rem;color:var(--muted);">Link to NeuroPhoenix site:</p>
+    <a href="[NEUROPHOENIX URL]" class="site-link">[NEUROPHOENIX URL]</a>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════
+       ROLE 2: LEAD DEVELOPER — RGM
+       ═══════════════════════════════════════ -->
+  <div class="role-section role-section-lead">
+    <span class="role-label role-label-lead">ROLE: LEAD DEVELOPER</span>
+    <h2>LEAD DEVELOPER REPORT</h2>
+    <div class="project-tag">// PROJECT: RETRO GAME MUSEUM &nbsp;·&nbsp; CLIENT: ISAIAH SOTUTU &nbsp;·&nbsp; JUNIOR: TAD HURLEY</div>
+
+    <h3>How did you manage your development team and communicate the tasks for your junior devs?</h3>
+    <p>
+      As lead developer on the Retro Game Museum I was responsible for building the home page
+      and coordinating with Tad Hurley as the junior developer. I communicated the page
+      assignments and shared the client's style guide and site plan materials. Despite this,
+      Tad did not respond to communications and made no contributions to the project.
+      Rather than submit an incomplete site to the client, I completed all pages — including
+      the child pages that were Tad's responsibility — entirely on my own.
+    </p>
+
+    <h3>How did you communicate with your client? Was there any issues?</h3>
+    <p>
+      My communication with client Isaiah Sotutu was the most productive relationship in
+      this project. He provided a detailed site plan, a style guide specifying exact colors
+      and fonts (VT323 for headings, JetBrains Mono for body text, a navy/gold/blue/red
+      palette), and content for each page. I shared progress updates and incorporated his
+      feedback. The client was clear about his vision — a retro 80s/90s gaming aesthetic —
+      and I worked to deliver exactly that across all four pages.
+    </p>
+
+    <h3>How did you handle publishing your client's site and sharing it with the client?</h3>
+    <p>
+      I exported the completed site as static HTML, CSS, and JavaScript files and deployed
+      it using Netlify. The live site includes four fully styled and linked pages: Home,
+      Legendary Consoles, About, and Contact. The live URL was shared directly with the
+      client for review.
+    </p>
+
+    <h3>How was your experience with managing your site with GitHub?</h3>
+    <p>
+      I used GitHub for version control throughout the project. Working independently made
+      branch management simpler, but it also highlighted how much easier a functioning team
+      would have made the workload. I committed changes consistently and kept the repository
+      organized as a professional habit, treating it as I would on a real development project.
+    </p>
+
+    <div class="divider"></div>
+    <p style="font-size:.8rem;color:var(--muted);">Link to Retro Game Museum site:</p>
+    <a href="https://elegant-liger-ab9f08.netlify.app/" class="site-link site-link-gold">https://elegant-liger-ab9f08.netlify.app/</a>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════
+       ROLE 3: JUNIOR DEVELOPER — PIXELFORGE
+       ═══════════════════════════════════════ -->
+  <div class="role-section role-section-junior">
+    <span class="role-label role-label-junior">ROLE: JUNIOR DEVELOPER</span>
+    <h2>JUNIOR DEVELOPER REPORT</h2>
+    <div class="project-tag">// PROJECT: PIXELFORGE &nbsp;·&nbsp; CLIENT: TAD HURLEY &nbsp;·&nbsp; LEAD: ISAIAH SOTUTU</div>
+
+    <h3>How did you communicate with your team lead? Was there any issues?</h3>
+    <p>
+      On the PixelForge project I was assigned as a junior developer under lead developer
+      Isaiah Sotutu. Isaiah did not communicate with me at any point during the project.
+      I made multiple attempts to reach out to find out which pages I was responsible for
+      and how to access the repository, but received no response. This was a direct
+      consequence of the group communication breakdown described at the top of this report.
+      Without direction or repository access from the lead, I had no way to participate
+      in my assigned junior role.
+    </p>
+
+    <h3>Did you know what was expected of you for each site?</h3>
+    <p>
+      I understood from the course requirements that as a junior developer I would be
+      responsible for building a child page. However, because Isaiah never communicated
+      a task assignment or added me to the repository, I was unable to act on that
+      understanding. I knew what my role should have been in theory, but in practice
+      the lead developer's silence made it impossible to execute.
+    </p>
+
+    <h3>Were you able to contribute to your sites?</h3>
+    <p>
+      I was not able to contribute to PixelForge in my official junior developer capacity
+      due to the lack of communication from the lead. To ensure the client (Tad Hurley)
+      still had a complete deliverable, I independently built the entire PixelForge site
+      — including both the home page and the about page — outside of my assigned role.
+      I felt a responsibility to make sure the project was finished even though I was
+      not given the support I needed to fulfill my junior role properly.
+    </p>
+
+    <h3>Did you run into any issues with GitHub and adding your changes to the sites?</h3>
+    <p>
+      Because Isaiah never added me to the PixelForge GitHub repository, I had no
+      opportunity to use version control in my junior developer capacity on this project.
+      This was a direct result of the lead developer failing to onboard me. In a professional
+      environment, a lead developer is responsible for setting up repository access for all
+      team members at the start of the project. That step was never taken here.
+    </p>
+
+    <div class="divider"></div>
+    <p style="font-size:.8rem;color:var(--muted);">Link to PixelForge site:</p>
+    <a href="[PIXELFORGE URL]" class="site-link site-link-red">[PIXELFORGE URL]</a>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════
+       GENERAL EXPERIENCE & REFLECTIONS
+       ═══════════════════════════════════════ -->
+  <div class="role-section role-section-general">
+    <span class="role-label role-label-general">GENERAL REFLECTIONS</span>
+    <h2>GENERAL EXPERIENCE</h2>
+    <div class="project-tag">// COURSE: WDD 130 &nbsp;·&nbsp; 2026</div>
+
+    <h3>What was the most challenging part of this project? Were you able to overcome it?</h3>
+    <p>
+      Without question, the most challenging part was carrying the full workload of an entire
+      team on my own. The group structure required that roles be shared and that each person
+      contribute meaningfully. In reality, communication from my teammates was largely absent
+      and I ended up doing the work of multiple roles simultaneously. I overcame this by
+      staying organized, prioritizing deliverables, and committing to quality work regardless
+      of the circumstances. It was not easy, but I refused to let the lack of teamwork
+      result in an incomplete project.
+    </p>
+
+    <h3>What did you enjoy most about this project?</h3>
+    <p>
+      Despite the challenges, I genuinely enjoyed the creative process. Building the Retro
+      Game Museum was especially rewarding — the 80s/90s arcade aesthetic gave me a lot to
+      work with, and seeing a polished, multi-page site come together from a style guide
+      and a set of content requirements was deeply satisfying. Knowing that I built something
+      that looks and functions like a real product entirely on my own made the finished result
+      feel earned.
+    </p>
+
+    <h3>What would you do differently if you could do the project again?</h3>
+    <p>
+      I would raise the communication issue with my instructor much earlier. Rather than
+      absorbing all of the work myself and hoping things would improve, I should have flagged
+      the problem in week one. I would also advocate for a required group agreement at the
+      start — a document where all members commit to response times, deadlines, and how
+      work will be distributed. Accountability needs to be built into the process from
+      the beginning, not added after problems arise.
+    </p>
+
+    <h3>Do you feel more confident in working on real-world projects after this experience? Explain.</h3>
+    <p>
+      Yes — more confident than I expected. This project gave me hands-on experience with
+      the complete lifecycle of web development: planning, designing, coding, version control,
+      and deployment. I did it under real constraints with real deliverables. The team
+      challenges, frustrating as they were, also taught me something valuable: in the real
+      world, projects do not always have ideal conditions. Professionals are expected to
+      deliver anyway. I did that here, and that gives me genuine confidence going forward.
+    </p>
+  </div>
+
+  <footer>© 2026 &nbsp;·&nbsp; WDD 130 &nbsp;·&nbsp; CLIENT / DEVELOPER TEAM PROJECT REPORT</footer>
+
+</div>
+</body>
+</html>
